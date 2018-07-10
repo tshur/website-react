@@ -35,9 +35,9 @@ class App extends Component {
     const { name } = this.props;
 
     return (
-      <div>
+      <div className="app">
         <div className="splash">
-          <h1> Hello, there {username} -- is your name {name}? </h1>
+          <h1> Hello, {username}. Welcome to my blog! </h1>
           Change name:
           <input
             type="text"
@@ -47,21 +47,12 @@ class App extends Component {
         </div>
         <br />
         <div className="hobbies">
-          <h3> Name: {name} </h3>
           <AddHobby addNew={this.addHobby} />
           <Hobbies hobbies={hobbies} />
         </div>
       </div>
     );
   }
-}
-
-App.defaultProps = {
-  name: 'Name'
-}
-
-App.propTypes = {
-  name: PropTypes.string.isRequired
 }
 
 export default App;
