@@ -9,18 +9,18 @@ class AddHobby extends Component {
       newHobby: ''
     };
 
-    this.updateNewHobby = this.updateNewHobby.bind(this);
-    this.handleAddNew = this.handleAddNew.bind(this);
+    this.onNewHobby = this.onNewHobby.bind(this);
+    this.onAddNew = this.onAddNew.bind(this);
   }
 
-  updateNewHobby(e) {
+  onNewHobby(event) {
     this.setState({
-      newHobby: e.target.value
+      newHobby: event.target.value
     });
   }
 
-  handleAddNew() {
-    if (!!this.state.newHobby) {
+  onAddNew() {
+    if (this.state.newHobby) {
       this.props.addNew(this.state.newHobby);
       this.setState({
         newHobby: ''
@@ -36,9 +36,9 @@ class AddHobby extends Component {
         <input
           type="text"
           value={newHobby}
-          onChange={this.updateNewHobby}
+          onChange={this.onNewHobby}
         />
-        <button onClick={this.handleAddNew}> Add Hobby </button>
+        <button onClick={this.onAddNew}> Add Hobby </button>
       </div>
     );
   }

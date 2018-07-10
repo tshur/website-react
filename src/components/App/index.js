@@ -14,13 +14,13 @@ class App extends Component {
       hobbies: [],
     };
 
-    this.handleChange = this.handleChange.bind(this);
+    this.onNameChange = this.onNameChange.bind(this);
     this.addHobby = this.addHobby.bind(this);
   }
 
-  handleChange(e) {
+  onNameChange(event) {
     this.setState({
-      username: e.target.value
+      username: event.target.value
     });
   }
 
@@ -42,7 +42,7 @@ class App extends Component {
           <input
             type="text"
             value={username}
-            onChange={this.handleChange}
+            onChange={this.onNameChange}
           />
         </div>
         <br />
