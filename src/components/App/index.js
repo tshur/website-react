@@ -1,20 +1,17 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import './index.css';
 
-import Hobbies from './Hobbies.js';
-import AddHobby from './AddHobby.js';
+import Hobbies from '../Hobbies';
+import AddHobby from '../AddHobby';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       username: 'tim.shur',
-      hobbies: [
-        'cooking',
-        'coding',
-        'gaming'
-      ]
+      hobbies: [],
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -28,32 +25,43 @@ class App extends React.Component {
   }
 
   addHobby(hobby) {
-    this.setState((state) => ({
-      hobbies: state.hobbies.concat([hobby])
-    }));
+    this.setState({
+      hobbies: [...this.state.hobbies, hobby]
+    });
   }
 
   render() {
+    const { username, hobbies } = this.state;
+    const { name } = this.props;
+
     return (
       <div>
         <div className="splash">
-          <h1> Hello, there {this.state.username} -- is your name {this.props.name}? </h1>
+          <h1> Hello, there {username} -- is your name {name}? </h1>
           Change name:
           <input
             type="text"
-            value={this.state.username}
+            value={username}
             onChange={this.handleChange}
           />
         </div>
         <br />
         <div className="hobbies">
-          <h3> Name: {this.props.name} </h3>
+          <h3> Name: {name} </h3>
           <AddHobby addNew={this.addHobby} />
-          <Hobbies hobbies={this.state.hobbies} />
+          <Hobbies hobbies={hobbies} />
         </div>
       </div>
     );
   }
+}
+
+App.defaultProps = {
+  name: 'Name'
+}
+
+App.propTypes = {
+  name: PropTypes.string.isRequired
 }
 
 export default App;

@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
@@ -17,6 +18,7 @@
     "css-loader": "^0.28.11",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "react-test-renderer": "^16.4.1",
     "style-loader": "^0.21.0"
   }
 }

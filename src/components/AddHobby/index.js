@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-class AddHobby extends React.Component {
+class AddHobby extends Component {
   constructor(props) {
     super(props);
 
@@ -28,17 +29,23 @@ class AddHobby extends React.Component {
   }
 
   render() {
+    const { newHobby } = this.state;
+
     return (
       <div>
         <input
           type="text"
-          value={this.state.newHobby}
+          value={newHobby}
           onChange={this.updateNewHobby}
         />
         <button onClick={this.handleAddNew}> Add Hobby </button>
       </div>
     );
   }
+}
+
+AddHobby.propTypes = {
+  addNew: PropTypes.func
 }
 
 export default AddHobby;
