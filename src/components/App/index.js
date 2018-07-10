@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import './index.css';
 
 import Hobbies from '../Hobbies';
@@ -32,7 +31,6 @@ class App extends Component {
 
   render() {
     const { username, hobbies } = this.state;
-    const { name } = this.props;
 
     return (
       <div className="app">
