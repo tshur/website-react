@@ -3,20 +3,20 @@ import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 
-import App from '.';
+import Navbar from '.';
 
-describe('App', () => {
+describe('Navbar', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, div);
+    ReactDOM.render(<BrowserRouter><Navbar /></BrowserRouter>, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   test('has a valid snapshot', () => {
     const component = renderer.create(
       <BrowserRouter>
-        <App />
+        <Navbar />
       </BrowserRouter>
     );
     const tree = component.toJSON();

@@ -1,23 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import { BrowserRouter } from 'react-router-dom';
+import Footer from '.';
 
-import App from '.';
-
-describe('App', () => {
+describe('Footer', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, div);
+    ReactDOM.render(<Footer />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   test('has a valid snapshot', () => {
     const component = renderer.create(
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <Footer />
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
