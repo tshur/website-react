@@ -1,0 +1,12 @@
+:local .body {
+  height: calc(100% - 80px);
+  width: 100%;
+  overflow: auto;
+  background: red;
+}
+
+:local .footer {
+  height: 80px;
+  width: 100%;
+  overflow: auto;
+}

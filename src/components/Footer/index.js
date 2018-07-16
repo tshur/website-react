@@ -1,8 +1,8 @@
 import React from 'react';
-import './index.css';
+import styles from './index.css';
 
 const Footer = () =>
-  <div>
+  <div className={`container ${styles.footer}`}>
     <h1> Footer </h1>
   </div>
 
