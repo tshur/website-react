@@ -1,9 +1,20 @@
 import React from 'react';
-import './index.css';
+import styles from './index.css';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFrown } from '@fortawesome/free-solid-svg-icons';
 
 const NotFound = () =>
-  <div>
-    <h1> 404: This page does not exist! </h1>
+  <div className={`container ${styles.not_found}`}>
+    <div className={styles.center}>
+      <FontAwesomeIcon icon={faFrown} size='8x' />
+      <div className={styles.big}>
+        404
+      </div>
+      <div className={styles.text}>
+        Oops! This page does not exist!
+      </div>
+    </div>
   </div>
 
 export default NotFound;
