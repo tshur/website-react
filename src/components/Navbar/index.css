@@ -21,10 +21,6 @@
   text-align: center;
 }
 
-:local .link {
-  text-decoration: none;
-}
-
 :local .text {
   position: absolute;
   top: 50%;

@@ -10,21 +10,21 @@ const Footer = () =>
     <div className={styles.contact}>
       <div className={styles.item}>
         <a href='mailto:tim.shur@gmail.com'
-           className={styles.link}>
+           className='link'>
           <FontAwesomeIcon icon={faEnvelope} className={styles.icon} size='lg'/>
         </a>
         <a href='mailto:tim.shur@gmail.com'
-           className={`${styles.text} ${styles.link}`}>
+           className={`${styles.text} link`}>
           tim.shur@gmail.com
         </a>
       </div>
       <div className={`${styles.item} ${styles.linkedin}`}>
         <a href='https://www.linkedin.com/in/timshur'
-           className={`${styles.link}`}>
+           className='link'>
           <FontAwesomeIcon icon={faLinkedin} className={styles.icon} size='lg'/>
         </a>
         <a href='https://www.linkedin.com/in/timshur'
-           className={`${styles.text} ${styles.link}`}>
+           className={`${styles.text} link`}>
           linkedin.com/in/timshur
         </a>
       </div>

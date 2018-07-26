@@ -5,21 +5,21 @@ import styles from './index.css';
 
 const Navbar = () =>
   <div className={`container ${styles.nav}`}>
-    <Link to='/' className={styles.link}>
+    <Link to='/' className='link'>
       <div className={styles.button}>
         <div className={styles.text}>
           Home
         </div>
       </div>
     </Link>
-    <Link to='/about' className={styles.link}>
+    <Link to='/about' className='link'>
       <div className={styles.button}>
         <div className={styles.text}>
           About
         </div>
       </div>
     </Link>
-    <Link to='/projects' className={styles.link}>
+    <Link to='/projects' className='link'>
       <div className={styles.button}>
         <div className={styles.text}>
           Projects
