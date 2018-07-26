@@ -9,16 +9,24 @@ const Footer = () =>
   <div className={`container ${styles.footer}`}>
     <div className={styles.contact}>
       <div className={styles.item}>
-        <FontAwesomeIcon icon={faEnvelope} className={styles.icon} size='lg'/>
-        <div className={styles.text}>
+        <a href='mailto:tim.shur@gmail.com'
+           className={styles.link}>
+          <FontAwesomeIcon icon={faEnvelope} className={styles.icon} size='lg'/>
+        </a>
+        <a href='mailto:tim.shur@gmail.com'
+           className={`${styles.text} ${styles.link}`}>
           tim.shur@gmail.com
-        </div>
+        </a>
       </div>
       <div className={`${styles.item} ${styles.linkedin}`}>
-        <FontAwesomeIcon icon={faLinkedin} className={styles.icon} size='lg'/>
-        <div className={styles.text}>
+        <a href='https://www.linkedin.com/in/timshur'
+           className={`${styles.link}`}>
+          <FontAwesomeIcon icon={faLinkedin} className={styles.icon} size='lg'/>
+        </a>
+        <a href='https://www.linkedin.com/in/timshur'
+           className={`${styles.text} ${styles.link}`}>
           linkedin.com/in/timshur
-        </div>
+        </a>
       </div>
     </div>
   </div>

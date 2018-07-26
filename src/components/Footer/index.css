@@ -32,6 +32,10 @@
 :local .text {
   float: left;
   margin-left: 15px;
-  padding-top: 3px;
   font-size: 20px;
+}
+
+:local .link {
+  text-decoration: none;
+  color: black;
 }
