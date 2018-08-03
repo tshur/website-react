@@ -1,19 +1,23 @@
 import React from 'react';
 import styles from './index.css';
 
+import Home from '../Home';
+import About from '../About';
+import Projects from '../Projects';
+
 const Body = props => {
   let content;
   switch (props.match.path) {
     case '/':
-      content = <p> HOME </p>;
+      content = <Home />;
       break;
 
     case '/about':
-      content = <p> ABOUT </p>;
+      content = <About />;
       break;
 
     case '/projects':
-      content = <p> PROJECTS </p>;
+      content = <Projects />;
       break;
 
     default:
@@ -22,8 +26,6 @@ const Body = props => {
 
   return (
     <div className={`container ${styles.body}`}>
-      <h1> Body </h1>
-      <p> {props.match.path} </p>
       {content}
     </div>
   );
