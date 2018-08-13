@@ -1,0 +1,10 @@
+:local .square {
+  padding: 0;
+  margin: 0;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  font-size: 48px;
+  overflow: hidden;
+  word-wrap: none;
+}
