@@ -64,9 +64,15 @@ class Game extends Component {
         move
         ? `Go to move #${move} at (${row}, ${col})`
         : `Go to game start`;
+
       return (
         <div key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+          <button
+            className={move === moveNumber ? `${styles.selected}` : ''}
+            onClick={() => this.jumpTo(move)}
+          >
+            {desc}
+          </button>
         </div>
       );
     });

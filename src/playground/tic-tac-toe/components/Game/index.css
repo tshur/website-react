@@ -1,3 +1,7 @@
 :local .status {
   font-size: 24px;
 }
+
+:local .selected {
+  font-weight: bold;
+}
