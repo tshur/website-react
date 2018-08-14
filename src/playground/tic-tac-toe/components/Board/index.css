@@ -1,3 +1,4 @@
 :local .row > * {
+  height: 60px;
   display: inline-block;
 }

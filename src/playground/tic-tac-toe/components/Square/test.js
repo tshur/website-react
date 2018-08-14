@@ -7,13 +7,20 @@ describe('Square', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Square />, div);
+    ReactDOM.render(
+      <Square
+        value='X'
+        onClick={() => this.props.value = 'O'}
+      />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   test('has a valid snapshot', () => {
     const component = renderer.create(
-      <Square />
+      <Square
+        value='X'
+        onClick={() => this.props.value = 'O'}
+      />
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
