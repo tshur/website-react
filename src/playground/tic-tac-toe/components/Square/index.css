@@ -1,10 +1,18 @@
 :local .square {
-  padding: 0;
+  background: #eee;
+  border: 1px solid #777;
+  float: left;
+  padding-top: 2px;
   margin: 0;
   height: 60px;
   width: 60px;
   line-height: 60px;
+  text-align: center;
   font-size: 48px;
   overflow: hidden;
   word-wrap: none;
+}
+
+:local .square:focus {
+  outline: 0;
 }

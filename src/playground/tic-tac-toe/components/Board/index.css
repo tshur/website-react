@@ -1,4 +1,3 @@
-:local .row > * {
-  height: 60px;
-  display: inline-block;
+:local .row {
+  display: table-row;
 }

@@ -13,19 +13,13 @@ const Board = ({ squares, onClick }) => {
   return (
     <div>
       <div className={styles.row}>
-        {renderSquare(0)}
-        {renderSquare(1)}
-        {renderSquare(2)}
+        {renderSquare(0)} {renderSquare(1)} {renderSquare(2)}
       </div>
       <div className={styles.row}>
-        {renderSquare(3)}
-        {renderSquare(4)}
-        {renderSquare(5)}
+        {renderSquare(3)} {renderSquare(4)} {renderSquare(5)}
       </div>
       <div className={styles.row}>
-        {renderSquare(6)}
-        {renderSquare(7)}
-        {renderSquare(8)}
+        {renderSquare(6)} {renderSquare(7)} {renderSquare(8)}
       </div>
     </div>
   );
