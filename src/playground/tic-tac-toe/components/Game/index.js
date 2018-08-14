@@ -31,7 +31,7 @@ class Game extends Component {
     const squares = current.squares.slice();
     const moveLocation = [Math.floor(i / 3), i % 3];
 
-    if (calculateWinner(squares) || squares[i])
+    if (calculateWinner(squares).winner || squares[i])
       return;
 
     squares[i] = xIsNext ? 'X' : 'O';
@@ -64,7 +64,7 @@ class Game extends Component {
   render() {
     const { history, moveNumber, reversed, xIsNext } = this.state;
     const current = history[moveNumber];
-    const winner = calculateWinner(current.squares);
+    const { winner, winningLine } = calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
       const [row, col] = step.moveLocation;
@@ -89,17 +89,21 @@ class Game extends Component {
       moves.reverse();
 
     let status;
-    if (winner === 'tie')
-      status = `It's a draw!`;
-    else if (winner)
-      status = `Winner: ${winner}`;
-    else
+    if (!winner)
       status = `Next player: ${xIsNext ? 'X' : 'O'}`;
+    else if (winner === 'tie')
+      status = `It's a draw!`;
+    else
+      status = `Winner: ${winner}`;
 
     return (
       <div>
         <h1>Tic Tac Toe!</h1>
-        <Board squares={current.squares} onClick={i => this.handleClick(i)}/>
+        <Board
+          winningLine={winningLine}
+          squares={current.squares}
+          onClick={i => this.handleClick(i)}
+        />
         <div className={styles.status}>
           <div>{status}</div>
           <button onClick={this.handleReverse}> Reverse </button>
@@ -125,14 +129,14 @@ const calculateWinner = squares => {
   for (let line of lines) {
     let [a, b, c] = line;
     if (squares[a] && squares[a] === squares[b] && squares[b] === squares[c])
-      return squares[a];
+      return {winner: squares[a], winningLine: line};
   }
 
   for (let i = 0; i < squares.length; i++)
     if (!squares[i])
-      return null;
+      return {winner: null, winningLine: null};  // game in progress
 
-  return 'tie';
+  return {winner: 'tie', winningLine: null};  // tie
 }
 
 export default Game;

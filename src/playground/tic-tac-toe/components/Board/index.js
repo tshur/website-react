@@ -3,12 +3,13 @@ import styles from './index.css';
 
 import Square from '../Square';
 
-const Board = ({ squares, onClick }) => {
+const Board = ({ winningLine, squares, onClick }) => {
   const renderSquare = i =>
     <Square
       key={i}
       value={squares[i]}
       onClick={() => onClick(i)}
+      winningSquare={(winningLine && winningLine.includes(i)) || null}
     />
 
   const renderBoard = () => {
@@ -24,7 +25,7 @@ const Board = ({ squares, onClick }) => {
   }
 
   return (
-    <div>
+    <div className={styles.board}>
       {renderBoard(3)}
     </div>
   );

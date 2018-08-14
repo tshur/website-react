@@ -1,3 +1,13 @@
+:local .board {
+  display: table;
+  border-collapse: collapse;
+}
+
 :local .row {
   display: table-row;
+  border-bottom: 3px solid #444;
+}
+
+:local .row:last-child {
+  border-bottom: 0;
 }
