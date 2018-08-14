@@ -13,44 +13,55 @@ class Game extends Component {
           squares: Array(9).fill(null)
         }
       ],
-      x_is_next: true
+      moveNumber: 0,
+      xIsNext: true
     }
 
     this.handleClick = this.handleClick.bind(this);
+    this.jumpTo = this.jumpTo.bind(this);
   }
 
   handleClick(i) {
-    const { history, x_is_next } = this.state;
+    const { moveNumber, xIsNext } = this.state;
+    const history = this.state.history.slice(0, moveNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
 
-    if (calculate_winner(squares) || squares[i])
+    if (calculateWinner(squares) || squares[i])
       return;
 
-    squares[i] = x_is_next ? 'X' : 'O';
+    squares[i] = xIsNext ? 'X' : 'O';
     this.setState({
       history: [
         ...history,
         {squares: squares}
       ],
-      x_is_next: !x_is_next
+      moveNumber: history.length,
+      xIsNext: !xIsNext
+    });
+  }
+
+  jumpTo(move) {
+    this.setState({
+      moveNumber: move,
+      xIsNext: (move % 2) === 0
     });
   }
 
   render() {
-    const { history, x_is_next } = this.state;
-    const current = history[history.length - 1];
-    const winner = calculate_winner(current.squares);
+    const { history, moveNumber, xIsNext } = this.state;
+    const current = history[moveNumber];
+    const winner = calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
       const desc =
         move
-        ? `Go to move # ${move}`
+        ? `Go to move #${move}`
         : `Go to game start`;
       return (
-        <li>
-          {desc}
-        </li>
+        <div key={move}>
+          <button onClick={() => this.jumpTo(move)}> {desc} </button>
+        </div>
       );
     });
 
@@ -58,22 +69,22 @@ class Game extends Component {
     if (winner)
       status = `Winner: ${winner}`
     else
-      status = `Next player: ${x_is_next ? 'X' : 'O'}`
+      status = `Next player: ${xIsNext ? 'X' : 'O'}`
 
     return (
       <div>
         <h1> Tic Tac Toe! </h1>
-        <Board squares={current.squares} onClick={(i) => this.handleClick(i)}/>
+        <Board squares={current.squares} onClick={i => this.handleClick(i)}/>
         <div className={styles.status}>
           <div> {status} </div>
-          <ul> {moves} </ul>
+          <div> {moves} </div>
         </div>
       </div>
     );
   }
 }
 
-const calculate_winner = squares => {
+const calculateWinner = squares => {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
