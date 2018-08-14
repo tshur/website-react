@@ -15,10 +15,12 @@ class Game extends Component {
         }
       ],
       moveNumber: 0,
+      reversed: false,
       xIsNext: true
     }
 
     this.handleClick = this.handleClick.bind(this);
+    this.handleReverse = this.handleReverse.bind(this);
     this.jumpTo = this.jumpTo.bind(this);
   }
 
@@ -46,6 +48,12 @@ class Game extends Component {
     });
   }
 
+  handleReverse() {
+    this.setState({
+      reversed: !this.state.reversed
+    });
+  }
+
   jumpTo(move) {
     this.setState({
       moveNumber: move,
@@ -54,7 +62,7 @@ class Game extends Component {
   }
 
   render() {
-    const { history, moveNumber, xIsNext } = this.state;
+    const { history, moveNumber, reversed, xIsNext } = this.state;
     const current = history[moveNumber];
     const winner = calculateWinner(current.squares);
 
@@ -77,6 +85,10 @@ class Game extends Component {
       );
     });
 
+    if (reversed)
+      moves.reverse();
+
+
     let status;
     if (winner)
       status = `Winner: ${winner}`
@@ -89,6 +101,7 @@ class Game extends Component {
         <Board squares={current.squares} onClick={i => this.handleClick(i)}/>
         <div className={styles.status}>
           <div>{status}</div>
+          <button onClick={this.handleReverse}> Reverse </button>
           <div>{moves}</div>
         </div>
       </div>
