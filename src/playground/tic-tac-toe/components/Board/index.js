@@ -6,21 +6,26 @@ import Square from '../Square';
 const Board = ({ squares, onClick }) => {
   const renderSquare = i =>
     <Square
+      key={i}
       value={squares[i]}
       onClick={() => onClick(i)}
     />
 
+  const renderBoard = () => {
+    const board = [];
+    for (let i = 0; i < 3; i++) {
+      const row = [];
+      for (let j = 0; j < 3; j++) {
+        row.push(renderSquare(3 * i + j));
+      }
+      board.push(<div key={i} className={styles.row}>{row}</div>);
+    }
+    return board;
+  }
+
   return (
     <div>
-      <div className={styles.row}>
-        {renderSquare(0)} {renderSquare(1)} {renderSquare(2)}
-      </div>
-      <div className={styles.row}>
-        {renderSquare(3)} {renderSquare(4)} {renderSquare(5)}
-      </div>
-      <div className={styles.row}>
-        {renderSquare(6)} {renderSquare(7)} {renderSquare(8)}
-      </div>
+      {renderBoard(3)}
     </div>
   );
 }
