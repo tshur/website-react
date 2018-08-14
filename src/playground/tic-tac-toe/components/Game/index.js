@@ -88,12 +88,13 @@ class Game extends Component {
     if (reversed)
       moves.reverse();
 
-
     let status;
-    if (winner)
-      status = `Winner: ${winner}`
+    if (winner === 'tie')
+      status = `It's a draw!`;
+    else if (winner)
+      status = `Winner: ${winner}`;
     else
-      status = `Next player: ${xIsNext ? 'X' : 'O'}`
+      status = `Next player: ${xIsNext ? 'X' : 'O'}`;
 
     return (
       <div>
@@ -126,7 +127,12 @@ const calculateWinner = squares => {
     if (squares[a] && squares[a] === squares[b] && squares[b] === squares[c])
       return squares[a];
   }
-  return null;
+
+  for (let i = 0; i < squares.length; i++)
+    if (!squares[i])
+      return null;
+
+  return 'tie';
 }
 
 export default Game;
