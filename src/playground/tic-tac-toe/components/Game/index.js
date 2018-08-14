@@ -10,7 +10,8 @@ class Game extends Component {
     this.state = {
       history: [
         {
-          squares: Array(9).fill(null)
+          squares: Array(9).fill(null),
+          moveLocation: [null, null]
         }
       ],
       moveNumber: 0,
@@ -26,6 +27,7 @@ class Game extends Component {
     const history = this.state.history.slice(0, moveNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
+    const moveLocation = [Math.floor(i / 3), i % 3];
 
     if (calculateWinner(squares) || squares[i])
       return;
@@ -34,7 +36,10 @@ class Game extends Component {
     this.setState({
       history: [
         ...history,
-        {squares: squares}
+        {
+          squares,
+          moveLocation
+        }
       ],
       moveNumber: history.length,
       xIsNext: !xIsNext
@@ -54,13 +59,14 @@ class Game extends Component {
     const winner = calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
+      const [row, col] = step.moveLocation;
       const desc =
         move
-        ? `Go to move #${move}`
+        ? `Go to move #${move} at (${row}, ${col})`
         : `Go to game start`;
       return (
         <div key={move}>
-          <button onClick={() => this.jumpTo(move)}> {desc} </button>
+          <button onClick={() => this.jumpTo(move)}>{desc}</button>
         </div>
       );
     });
@@ -73,11 +79,11 @@ class Game extends Component {
 
     return (
       <div>
-        <h1> Tic Tac Toe! </h1>
+        <h1>Tic Tac Toe!</h1>
         <Board squares={current.squares} onClick={i => this.handleClick(i)}/>
         <div className={styles.status}>
-          <div> {status} </div>
-          <div> {moves} </div>
+          <div>{status}</div>
+          <div>{moves}</div>
         </div>
       </div>
     );
