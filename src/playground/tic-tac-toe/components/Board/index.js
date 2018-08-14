@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './index.css';
 
 import Square from '../Square';
@@ -29,6 +30,20 @@ const Board = ({ winningLine, squares, onClick }) => {
       {renderBoard(3)}
     </div>
   );
+}
+
+Board.defaultProps = {
+  winningLine: null
+};
+
+Board.propTypes = {
+  winningLine: PropTypes.arrayOf(
+    PropTypes.number
+  ),
+  squares: PropTypes.arrayOf(
+    PropTypes.string
+  ).isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
 export default Board;

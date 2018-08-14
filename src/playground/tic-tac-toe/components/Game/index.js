@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import styles from './index.css';
 
 import Board from '../Board';
+import styled from 'styled-components';
+
+const Button = styled.button`
+  background: #eee;
+  border: 1px solid #aaa;
+  height: 20px;
+  font-size: 14px;
+  &:focus {
+    outline: 0;
+  }
+`;
 
 class Game extends Component {
   constructor(props) {
@@ -74,14 +85,13 @@ class Game extends Component {
         : `Go to game start`;
 
       return (
-        <div key={move}>
-          <button
-            className={move === moveNumber ? `${styles.selected}` : ''}
-            onClick={() => this.jumpTo(move)}
-          >
-            {desc}
-          </button>
-        </div>
+        <Button
+          key={move}
+          className={`${styles.move}  ${move === moveNumber ? styles.selected : ''}`}
+          onClick={() => this.jumpTo(move)}
+        >
+          {desc}
+        </Button>
       );
     });
 
@@ -97,17 +107,19 @@ class Game extends Component {
       status = `Winner: ${winner}`;
 
     return (
-      <div>
-        <h1>Tic Tac Toe!</h1>
-        <Board
-          winningLine={winningLine}
-          squares={current.squares}
-          onClick={i => this.handleClick(i)}
-        />
+      <div className={styles.container}>
+        <div>
+          <h1>Tic Tac Toe!</h1>
+          <Board
+            winningLine={winningLine}
+            squares={current.squares}
+            onClick={i => this.handleClick(i)}
+          />
+        </div>
         <div className={styles.status}>
           <div>{status}</div>
-          <button onClick={this.handleReverse}> Reverse </button>
-          <div>{moves}</div>
+          <Button onClick={this.handleReverse}> Reverse </Button>
+          <div className={styles.moveList}>{moves}</div>
         </div>
       </div>
     );
