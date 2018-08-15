@@ -30,7 +30,7 @@ exports[`Projects has a valid snapshot 1`] = `
         className={undefined}
       >
         <button
-          className="sc-bdVaJa cioSGe"
+          className="sc-bdVaJa kZqmrt"
           onClick={[Function]}
         >
           C
@@ -40,7 +40,7 @@ exports[`Projects has a valid snapshot 1`] = `
         className={undefined}
       >
         <button
-          className="sc-bdVaJa cioSGe"
+          className="sc-bdVaJa kZqmrt"
           onClick={[Function]}
         >
           1
@@ -50,7 +50,7 @@ exports[`Projects has a valid snapshot 1`] = `
         className={undefined}
       >
         <button
-          className="sc-bdVaJa cioSGe"
+          className="sc-bdVaJa kZqmrt"
           onClick={[Function]}
         >
           2
@@ -60,10 +60,20 @@ exports[`Projects has a valid snapshot 1`] = `
         className={undefined}
       >
         <button
-          className="sc-bdVaJa cioSGe"
+          className="sc-bdVaJa kZqmrt"
           onClick={[Function]}
         >
           3
+        </button>
+      </div>
+      <div
+        className={undefined}
+      >
+        <button
+          className="sc-bdVaJa kZqmrt"
+          onClick={[Function]}
+        >
+          +
         </button>
       </div>
     </div>

@@ -11,6 +11,9 @@ const Button = styled.button`
   &:focus {
     outline: 0;
   }
+  &:hover {
+    background: #ddd;
+  }
 `;
 
 const Key = ({ symbol, onClick }) =>

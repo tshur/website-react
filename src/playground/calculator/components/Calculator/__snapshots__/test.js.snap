@@ -25,6 +25,10 @@ exports[`Calculator has a valid snapshot 1`] = `
       onClick={[Function]}
       symbol="3"
     />
+    <Key
+      onClick={[Function]}
+      symbol="+"
+    />
   </div>
 </div>
 `;
