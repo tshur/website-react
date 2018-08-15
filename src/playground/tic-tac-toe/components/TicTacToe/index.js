@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import styles from './index.css';
 
 import Board from '../Board';
-import styled from 'styled-components';
 
 const Button = styled.button`
   background: #eee;
@@ -14,7 +14,7 @@ const Button = styled.button`
   }
 `;
 
-class Game extends Component {
+class TicTacToe extends Component {
   constructor(props) {
     super(props);
 
@@ -151,4 +151,4 @@ const calculateWinner = squares => {
   return {winner: 'tie', winningLine: null};  // tie
 };
 
-export default Game;
+export default TicTacToe;

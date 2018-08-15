@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator has a valid snapshot 1`] = `
+<div>
+  <h1>
+    Simple Calculator
+  </h1>
+  <Display
+    value={0}
+  />
+  <div>
+    <Key
+      onClick={[Function]}
+      symbol="C"
+    />
+    <Key
+      onClick={[Function]}
+      symbol="1"
+    />
+    <Key
+      onClick={[Function]}
+      symbol="2"
+    />
+    <Key
+      onClick={[Function]}
+      symbol="3"
+    />
+  </div>
+</div>
+`;

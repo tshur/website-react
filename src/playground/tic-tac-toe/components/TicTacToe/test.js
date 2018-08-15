@@ -1,26 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow } from 'enzyme';
-import Game from '.';
+import TicTacToe from '.';
 
-describe('Game', () => {
+describe('TicTacToe', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Game />, div);
+    ReactDOM.render(<TicTacToe />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   test('has a valid snapshot', () => {
     const wrapper = shallow(
-      <Game />
+      <TicTacToe />
     );
     expect(wrapper).toMatchSnapshot();
   });
 
   test('ignores click appropriately', () => {
     const wrapper = shallow(
-      <Game />
+      <TicTacToe />
     );
     const board = wrapper.find('Board');
 
@@ -42,7 +42,7 @@ describe('Game', () => {
 
   test('calculates next player correctly', () => {
     const wrapper = shallow(
-      <Game />
+      <TicTacToe />
     );
     const board = wrapper.find('Board');
     expect(wrapper.find('div.status').text()).toEqual('Next player: X');
@@ -52,7 +52,7 @@ describe('Game', () => {
 
   test('calculates game winner correctly', () => {
     const wrapper = shallow(
-      <Game />
+      <TicTacToe />
     );
     const board = wrapper.find('Board');
     board.simulate('click', 0);

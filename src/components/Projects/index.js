@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './index.css';
 
-import Game from '../../playground/tic-tac-toe/components/Game';
+import Calculator from '../../playground/calculator/components/Calculator';
 
 const Projects = () =>
   <div className={`container ${styles.projects}`}>
     <h1> Projects </h1>
     <br />
-    <Game />
+    <Calculator />
   </div>
 
 export default Projects;
