@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Projects has a valid snapshot 1`] = `
+<div
+  className="container undefined"
+>
+  <h1>
+     Projects 
+  </h1>
+  <br />
+  <div
+    className={undefined}
+  >
+    <div>
+      <h1>
+        Tic Tac Toe!
+      </h1>
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+        >
+          <button
+            className="undefined "
+            onClick={[Function]}
+          />
+          <button
+            className="undefined "
+            onClick={[Function]}
+          />
+          <button
+            className="undefined "
+            onClick={[Function]}
+          />
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="undefined "
+            onClick={[Function]}
+          />
+          <button
+            className="undefined "
+            onClick={[Function]}
+          />
+          <button
+            className="undefined "
+            onClick={[Function]}
+          />
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="undefined "
+            onClick={[Function]}
+          />
+          <button
+            className="undefined "
+            onClick={[Function]}
+          />
+          <button
+            className="undefined "
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className={undefined}
+    >
+      <div
+        className="status"
+      >
+        Next player: X
+      </div>
+      <button
+        className="sc-bdVaJa dsPgtj"
+        onClick={[Function]}
+      >
+         Reverse 
+      </button>
+      <div
+        className={undefined}
+      >
+        <button
+          className="undefined  undefined sc-bdVaJa dsPgtj"
+          onClick={[Function]}
+        >
+          Go to game start
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

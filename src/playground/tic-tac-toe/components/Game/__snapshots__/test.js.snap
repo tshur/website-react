@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Game has a valid snapshot 1`] = `
+<div>
+  <div>
+    <h1>
+      Tic Tac Toe!
+    </h1>
+    <Board
+      onClick={[Function]}
+      squares={
+        Array [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+        ]
+      }
+      winningLine={null}
+    />
+  </div>
+  <div>
+    <div
+      className="status"
+    >
+      Next player: X
+    </div>
+    <styled.button
+      onClick={[Function]}
+    >
+       Reverse 
+    </styled.button>
+    <div>
+      <styled.button
+        className="undefined  undefined"
+        key="0"
+        onClick={[Function]}
+      >
+        Go to game start
+      </styled.button>
+    </div>
+  </div>
+</div>
+`;
