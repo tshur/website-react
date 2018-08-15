@@ -23,7 +23,7 @@ const Board = ({ winningLine, squares, onClick }) => {
       board.push(<div key={i} className={styles.row}>{row}</div>);
     }
     return board;
-  }
+  };
 
   return (
     <div className={styles.board}>
@@ -44,6 +44,6 @@ Board.propTypes = {
     PropTypes.string
   ).isRequired,
   onClick: PropTypes.func.isRequired
-}
+};
 
 export default Board;

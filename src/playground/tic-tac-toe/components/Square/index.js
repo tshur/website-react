@@ -19,6 +19,6 @@ Square.propTypes = {
   value: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   winningSquare: PropTypes.bool
-}
+};
 
 export default Square;

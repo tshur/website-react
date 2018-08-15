@@ -28,7 +28,7 @@ class Game extends Component {
       moveNumber: 0,
       reversed: false,
       xIsNext: true
-    }
+    };
 
     this.handleClick = this.handleClick.bind(this);
     this.handleReverse = this.handleReverse.bind(this);
@@ -149,6 +149,6 @@ const calculateWinner = squares => {
       return {winner: null, winningLine: null};  // game in progress
 
   return {winner: 'tie', winningLine: null};  // tie
-}
+};
 
 export default Game;
