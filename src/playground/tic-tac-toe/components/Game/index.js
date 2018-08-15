@@ -116,8 +116,8 @@ class Game extends Component {
             onClick={i => this.handleClick(i)}
           />
         </div>
-        <div className={styles.status}>
-          <div>{status}</div>
+        <div className={styles.info}>
+          <div className='status'>{status}</div>
           <Button onClick={this.handleReverse}> Reverse </Button>
           <div className={styles.moveList}>{moves}</div>
         </div>

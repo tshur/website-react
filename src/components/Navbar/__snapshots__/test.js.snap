@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar has a valid snapshot 1`] = `
+<div
+  className="container undefined"
+>
+  <a
+    className="link"
+    href="/"
+    onClick={[Function]}
+  >
+    <div
+      className={undefined}
+    >
+      <div
+        className={undefined}
+      >
+        Home
+      </div>
+    </div>
+  </a>
+  <a
+    className="link"
+    href="/about"
+    onClick={[Function]}
+  >
+    <div
+      className={undefined}
+    >
+      <div
+        className={undefined}
+      >
+        About
+      </div>
+    </div>
+  </a>
+  <a
+    className="link"
+    href="/projects"
+    onClick={[Function]}
+  >
+    <div
+      className={undefined}
+    >
+      <div
+        className={undefined}
+      >
+        Projects
+      </div>
+    </div>
+  </a>
+</div>
+`;

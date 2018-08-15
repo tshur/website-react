@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import Square from '.';
 
 describe('Square', () => {
@@ -9,20 +9,17 @@ describe('Square', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <Square
-        value='X'
         onClick={() => this.props.value = 'O'}
       />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   test('has a valid snapshot', () => {
-    const component = renderer.create(
+    const wrapper = shallow(
       <Square
-        value='X'
         onClick={() => this.props.value = 'O'}
       />
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });

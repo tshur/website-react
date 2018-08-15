@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home has a valid snapshot 1`] = `
+<div
+  className="container undefined"
+>
+  <h1>
+     Home 
+  </h1>
+</div>
+`;

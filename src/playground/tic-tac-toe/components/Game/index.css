@@ -3,7 +3,7 @@
   flex-direction: row;
 }
 
-:local .status {
+:local .info {
   padding-left: 30px;
   padding-top: 43px;
   font-size: 24px;

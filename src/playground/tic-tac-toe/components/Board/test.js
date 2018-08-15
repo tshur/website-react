@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import Board from '.';
 
 describe('Board', () => {
@@ -17,13 +17,22 @@ describe('Board', () => {
   });
 
   test('has a valid snapshot', () => {
-    const component = renderer.create(
+    const wrapper = shallow(
       <Board
         squares={squares}
         onClick={() => ''}
       />
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('renders 9 Squares', () => {
+    const wrapper = shallow(
+      <Board
+        squares={squares}
+        onClick={() => ''}
+      />
+    );
+    expect(wrapper.find('Square').length).toBe(9);
   });
 });
