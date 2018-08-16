@@ -68,13 +68,16 @@ class Calculator extends Component {
   }
 
   render() {
-    const { current, total } = this.state;
+    const { current, total, operator } = this.state;
 
     return (
       <div className={styles.calculator}>
         <h1>Simple Calculator</h1>
         <Display value={current || total || '0'} />
-        <KeyPad onClick={symbol => this.handleClick(symbol)} />
+        <KeyPad
+          onClick={symbol => this.handleClick(symbol)}
+          operator={current ? null : operator}
+        />
       </div>
     );
   }

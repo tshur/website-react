@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Button = styled.button`
   background: #eee;
+  transition: background 0.2s linear;
   border: 1px solid black;
   height: 60px;
   width: 60px;
@@ -12,14 +13,17 @@ const Button = styled.button`
     outline: 0;
   }
   &:hover {
-    background: #ddd;
+    background: #ccc;
   }
 `;
 
-const Key = ({ symbol, onClick }) =>
+const Key = ({ symbol, onClick, operator }) =>
   <div className={styles.key}>
     <Button
-      className={symbol === '0' ? styles.wide : ''}
+      className={`
+        ${symbol === '0' ? styles.wide : ''}
+        ${operator === symbol ? styles.highlight : ''}
+      `}
       onClick={onClick}
     >
       {symbol}

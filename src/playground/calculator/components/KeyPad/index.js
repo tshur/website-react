@@ -3,34 +3,34 @@ import styles from './index.css';
 
 import Key from '../Key';
 
-const KeyPad = ({ onClick }) =>
+const KeyPad = ({ onClick, operator }) =>
   <div>
     <div className={styles.row}>
       <Key symbol='C' onClick={() => onClick('C')} />
       <Key symbol='+/-' onClick={() => onClick('+/-')} />
       <Key symbol='%' onClick={() => onClick('%')} />
-      <Key symbol='/' onClick={() => onClick('/')} />
+      <Key symbol='/' onClick={() => onClick('/')} operator={operator} />
     </div>
 
     <div className={styles.row}>
       <Key symbol='7' onClick={() => onClick('7')} />
       <Key symbol='8' onClick={() => onClick('8')} />
       <Key symbol='9' onClick={() => onClick('9')} />
-      <Key symbol='*' onClick={() => onClick('*')} />
+      <Key symbol='*' onClick={() => onClick('*')} operator={operator} />
     </div>
 
     <div className={styles.row}>
       <Key symbol='4' onClick={() => onClick('4')} />
       <Key symbol='5' onClick={() => onClick('5')} />
       <Key symbol='6' onClick={() => onClick('6')} />
-      <Key symbol='-' onClick={() => onClick('-')} />
+      <Key symbol='-' onClick={() => onClick('-')} operator={operator} />
     </div>
 
     <div className={styles.row}>
       <Key symbol='1' onClick={() => onClick('1')} />
       <Key symbol='2' onClick={() => onClick('2')} />
       <Key symbol='3' onClick={() => onClick('3')} />
-      <Key symbol='+' onClick={() => onClick('+')} />
+      <Key symbol='+' onClick={() => onClick('+')} operator={operator} />
     </div>
 
     <div className={styles.row}>

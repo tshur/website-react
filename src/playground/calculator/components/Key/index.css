@@ -6,3 +6,7 @@
 :local .wide {
   width: 135px !important;
 }
+
+:local .highlight {
+  background: #ccc !important;
+}
