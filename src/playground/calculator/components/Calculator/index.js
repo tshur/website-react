@@ -56,7 +56,7 @@ class Calculator extends Component {
         current = ''
       else if (current === '-0')
         current = '-';
-      if (symbol !== '0')
+
         current += symbol;
     }
 
