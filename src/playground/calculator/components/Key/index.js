@@ -5,8 +5,8 @@ import styled from 'styled-components';
 const Button = styled.button`
   background: #eee;
   border: 1px solid black;
-  height: 30px;
-  width: 30px;
+  height: 60px;
+  width: 60px;
   cursor: pointer;
   &:focus {
     outline: 0;
@@ -18,7 +18,10 @@ const Button = styled.button`
 
 const Key = ({ symbol, onClick }) =>
   <div className={styles.key}>
-    <Button onClick={onClick}>
+    <Button
+      className={symbol === '0' ? styles.wide : ''}
+      onClick={onClick}
+    >
       {symbol}
     </Button>
   </div>

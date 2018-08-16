@@ -1,9 +1,8 @@
 :local .key {
   font-family: 'Courier New', Courier, monospace;
   font-size: 24px;
-  margin-right: 15px;
 }
 
-:local .key:last-child {
-  margin-right: 0;
+:local .wide {
+  width: 135px !important;
 }

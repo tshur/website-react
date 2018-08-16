@@ -23,58 +23,216 @@ exports[`Projects has a valid snapshot 1`] = `
         0
       </div>
     </div>
-    <div
-      className={undefined}
-    >
+    <div>
       <div
         className={undefined}
       >
-        <button
-          className="sc-bdVaJa kZqmrt"
-          onClick={[Function]}
+        <div
+          className={undefined}
         >
-          C
-        </button>
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            C
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            +/-
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            %
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            /
+          </button>
+        </div>
       </div>
       <div
         className={undefined}
       >
-        <button
-          className="sc-bdVaJa kZqmrt"
-          onClick={[Function]}
+        <div
+          className={undefined}
         >
-          1
-        </button>
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            7
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            8
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            9
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            *
+          </button>
+        </div>
       </div>
       <div
         className={undefined}
       >
-        <button
-          className="sc-bdVaJa kZqmrt"
-          onClick={[Function]}
+        <div
+          className={undefined}
         >
-          2
-        </button>
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            4
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            5
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            6
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            -
+          </button>
+        </div>
       </div>
       <div
         className={undefined}
       >
-        <button
-          className="sc-bdVaJa kZqmrt"
-          onClick={[Function]}
+        <div
+          className={undefined}
         >
-          3
-        </button>
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            1
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            2
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            3
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            +
+          </button>
+        </div>
       </div>
       <div
         className={undefined}
       >
-        <button
-          className="sc-bdVaJa kZqmrt"
-          onClick={[Function]}
+        <div
+          className={undefined}
         >
-          +
-        </button>
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            0
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            .
+          </button>
+        </div>
+        <div
+          className={undefined}
+        >
+          <button
+            className="sc-bdVaJa dyCkzW"
+            onClick={[Function]}
+          >
+            =
+          </button>
+        </div>
       </div>
     </div>
   </div>

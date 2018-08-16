@@ -2,61 +2,79 @@ import React, { Component } from 'react';
 import styles from './index.css';
 
 import Display from '../Display';
-import Key from '../Key';
+import KeyPad from '../KeyPad';
+
+
+const OPERATOR_FN = {
+  null: (total, current) => parseInt(current, 10),
+  '+': (total, current) => total + parseInt(current, 10),
+  '-': (total, current) => total - parseInt(current, 10),
+  '*': (total, current) => total * parseInt(current, 10),
+  '/': (total, current) => total / parseInt(current, 10),
+}
 
 class Calculator extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      value: 0,
-      result: 0,
-      showResult: true
+      total: null,
+      current: null,
+      operator: null,
     };
 
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(symbol) {
-    let { value, result, showResult } = this.state;
+    let { total, current, operator } = this.state;
 
     if (symbol === 'C') {
-      if (value === 0)
-        result = 0;
-      value = 0;
-      showResult = true;
-    } else if (symbol === '+') {
-      // TODO: need to store _previous_ operator
-      // because this is currently a polish calculator!
-      result = result + value;
-      value = 0;
-      showResult = true;
+      if (current === null)
+        total = null;
+      current = null;
+
+    } else if (symbol === '+/-') {
+      if (current) {
+        if (current[0] === '-')
+          current = current.slice(1);
+        else
+          current = '-' + current;
+      } else if (total && !operator) {
+        current = '-' + total;
+      }
+
+    } else if (symbol in OPERATOR_FN || symbol === '=') {
+      if (current) {
+        total = OPERATOR_FN[operator](total, current);
+        current = null;
+      }
+      operator = symbol === '=' ? null : symbol;
+
     } else {
-      value = value * 10 + parseInt(symbol, 10);
-      showResult = false;
+      if (!current || current === '0')
+        current = ''
+      else if (current === '-0')
+        current = '-';
+      if (symbol !== '0')
+        current += symbol;
     }
 
     this.setState({
-      value,
-      result,
-      showResult
+      total,
+      current,
+      operator
     });
   }
 
   render() {
-    const { value, result, showResult } = this.state;
+    const { current, total } = this.state;
 
     return (
       <div className={styles.calculator}>
         <h1>Simple Calculator</h1>
-        <Display value={showResult ? result : value} />
-        <div className={styles.keys}>
-          <Key symbol='C' onClick={() => this.handleClick('C')} />
-          <Key symbol='1' onClick={() => this.handleClick('1')} />
-          <Key symbol='2' onClick={() => this.handleClick('2')} />
-          <Key symbol='3' onClick={() => this.handleClick('3')} />
-          <Key symbol='+' onClick={() => this.handleClick('+')} />
-        </div>
+        <Display value={current || total || '0'} />
+        <KeyPad onClick={symbol => this.handleClick(symbol)} />
       </div>
     );
   }

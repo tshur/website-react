@@ -1,12 +1,7 @@
 :local .calculator {
   background: #eee;
-  width: 300px;
+  width: 285px;
   padding: 20px;
   overflow: hidden;
   word-wrap: none;
-}
-
-:local .keys {
-  display: flex;
-  flex-direction: row;
 }
