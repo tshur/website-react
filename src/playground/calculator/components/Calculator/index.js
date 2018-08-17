@@ -6,11 +6,11 @@ import KeyPad from '../KeyPad';
 
 
 const OPERATOR_FN = {
-  null: (total, current) => parseInt(current, 10),
-  '+': (total, current) => total + parseInt(current, 10),
-  '-': (total, current) => total - parseInt(current, 10),
-  '*': (total, current) => total * parseInt(current, 10),
-  '/': (total, current) => total / parseInt(current, 10),
+  null: (total, current) => parseFloat(current),
+  '+': (total, current) => total + parseFloat(current),
+  '-': (total, current) => total - parseFloat(current),
+  '*': (total, current) => total * parseFloat(current),
+  '/': (total, current) => total / parseFloat(current),
 }
 
 class Calculator extends Component {
@@ -29,10 +29,13 @@ class Calculator extends Component {
   handleClick(symbol) {
     let { total, current, operator } = this.state;
 
-    if (symbol === 'C') {
-      if (current === null)
-        total = null;
+    if (symbol === 'AC') {
+      total = null;
       current = null;
+      operator = null;
+
+    } else if (symbol === 'C') {
+      current = '0';
 
     } else if (symbol === '+/-') {
       if (current) {
@@ -42,6 +45,20 @@ class Calculator extends Component {
           current = '-' + current;
       } else if (total && !operator) {
         current = '-' + total;
+      } else {
+        current = '-0';
+      }
+
+    } else if (symbol === '%') {
+      if (!current)
+        current = '0';
+      current = String(parseFloat(current) / 100.0)
+
+    } else if (symbol === '.') {
+      if (!current) {
+        current = '0.';
+      } else if (!current.includes('.')) {
+        current += '.';
       }
 
     } else if (symbol in OPERATOR_FN || symbol === '=') {
@@ -77,6 +94,7 @@ class Calculator extends Component {
         <KeyPad
           onClick={symbol => this.handleClick(symbol)}
           operator={current ? null : operator}
+          current={current}
         />
       </div>
     );

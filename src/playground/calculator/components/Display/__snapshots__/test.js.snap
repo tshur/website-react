@@ -2,6 +2,8 @@
 
 exports[`Display has a valid snapshot 1`] = `
 <div>
-  <div />
+  <div>
+    Error
+  </div>
 </div>
 `;

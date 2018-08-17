@@ -45,6 +45,7 @@ describe('Calculator', () => {
     for (let a of [2]) {
       for (let b of [-3, 0, 1]) {
         let c = OPERATOR_FN[op](a, b);
+
         test(`correct result for ${a} ${op} ${b} = ${c}`, () => {
           const wrapper = shallow(
             <Calculator />
@@ -74,10 +75,10 @@ describe('Calculator', () => {
     // Single clear
     click('C');
     expect(wrapper.state('total')).toEqual(12);
-    expect(wrapper.state('current')).toEqual(null);
+    expect(wrapper.state('current')).toEqual('0');
 
     // Double clear (AC)
-    click('C');
+    click('AC');
     expect(wrapper.state('total')).toEqual(null);
     expect(wrapper.state('current')).toEqual(null);
 
@@ -86,13 +87,44 @@ describe('Calculator', () => {
     click(3), click(4), click('C');
     click(4), click(8), click('=');
     expect(wrapper.state('total')).toEqual(60);
+
+    // Clear operator
+    click(1), click('+'), click(1);
+    click('AC');
+    expect(wrapper.state('operator')).toEqual(null);
   });
 
   test('equals works correctly', () => {
 
   });
 
-  test('+/- works correctly', () => {
+  test('decimal point works correctly', () => {
 
+  });
+
+  test('percent (%) works correctly', () => {
+
+  });
+
+  test('+/- works correctly', () => {
+    const wrapper = shallow(
+      <Calculator />
+    );
+    const keypad = wrapper.find('KeyPad');
+    const click = symbol => keypad.simulate('click', String(symbol));
+
+    click(1), click('+/-');
+    expect(wrapper.state('current')).toEqual('-1');
+
+    click('+'), click(2), click('+/-'), click('+/-');
+    click('+/-'), click('=');
+    expect(wrapper.state('total')).toEqual(-3);
+
+    click(1), click('+'), click('+/-');
+    expect(wrapper.state('current')).toEqual('-0');
+
+    click('AC'), click(1), click('+');
+    click('+/-'), click(1), click('=');
+    expect(wrapper.state('total')).toEqual(0);
   });
 });

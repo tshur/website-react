@@ -9,6 +9,7 @@ exports[`Calculator has a valid snapshot 1`] = `
     value="0"
   />
   <KeyPad
+    current={null}
     onClick={[Function]}
     operator={null}
   />
