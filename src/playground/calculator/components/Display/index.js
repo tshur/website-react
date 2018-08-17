@@ -5,6 +5,18 @@ const Display = ({ value }) => {
   if (!isFinite(value))
     value = 'Error';
 
+  value = String(value);
+  if (
+    value.length > 9 ||
+    (value.startsWith('-') && value.length === 9))
+  {
+    let guess = parseFloat(value).toPrecision(5);
+    if (String(guess).length < 9)
+      value = parseFloat(value).toPrecision(8);
+    else
+      value = guess;
+  }
+
   return (
     <div className={styles.display}>
       <div className={styles.value}>{value}</div>

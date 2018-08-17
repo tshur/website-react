@@ -74,7 +74,8 @@ class Calculator extends Component {
       else if (current === '-0')
         current = '-';
 
-        current += symbol;
+        if (current.length < 9)
+          current += symbol;
     }
 
     this.setState({
