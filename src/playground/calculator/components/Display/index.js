@@ -11,10 +11,14 @@ const Display = ({ value }) => {
     (value.startsWith('-') && value.length === 9))
   {
     let guess = parseFloat(value).toPrecision(5);
-    if (String(guess).length < 9)
-      value = parseFloat(value).toPrecision(8);
-    else
+    if (String(guess).length < 9) {
+      if (parseFloat(value) < 1)
+        value = parseFloat(value).toFixed(8);
+      else
+        value = parseFloat(value).toPrecision(8);
+    } else {
       value = guess;
+    }
   }
 
   return (

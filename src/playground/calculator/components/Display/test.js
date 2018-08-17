@@ -35,6 +35,8 @@ describe('Display', () => {
     expect(displayText()).toEqual('0.1234567');
     wrapper.setProps({ value: 6.1234567 });
     expect(displayText()).toEqual('6.1234567');
+    wrapper.setProps({ value: 0.0123456789 });
+    expect(displayText()).toEqual('0.01234568');
 
     // Mixed precision
     wrapper.setProps({ value: 12345.6789 });
