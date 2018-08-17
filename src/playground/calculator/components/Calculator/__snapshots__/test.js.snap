@@ -10,6 +10,7 @@ exports[`Calculator has a valid snapshot 1`] = `
   />
   <KeyPad
     onClick={[Function]}
+    operator={null}
   />
 </div>
 `;

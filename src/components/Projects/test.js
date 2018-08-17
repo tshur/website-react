@@ -5,7 +5,7 @@ import Projects from '.';
 
 describe('Projects', () => {
 
-  it('renders without crashing', () => {
+  test('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Projects />, div);
     ReactDOM.unmountComponentAtNode(div);

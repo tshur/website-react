@@ -5,7 +5,7 @@ import Key from '.';
 
 describe('Key', () => {
 
-  it('renders without crashing', () => {
+  test('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Key />, div);
     ReactDOM.unmountComponentAtNode(div);

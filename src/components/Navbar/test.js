@@ -7,7 +7,7 @@ import Navbar from '.';
 
 describe('Navbar', () => {
 
-  it('renders without crashing', () => {
+  test('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<BrowserRouter><Navbar /></BrowserRouter>, div);
     ReactDOM.unmountComponentAtNode(div);

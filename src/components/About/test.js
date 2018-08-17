@@ -5,7 +5,7 @@ import About from '.';
 
 describe('About', () => {
 
-  it('renders without crashing', () => {
+  test('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<About />, div);
     ReactDOM.unmountComponentAtNode(div);

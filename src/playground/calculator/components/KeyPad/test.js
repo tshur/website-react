@@ -5,7 +5,7 @@ import KeyPad from '.';
 
 describe('KeyPad', () => {
 
-  it('renders without crashing', () => {
+  test('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<KeyPad />, div);
     ReactDOM.unmountComponentAtNode(div);

@@ -3,7 +3,10 @@
 exports[`Key has a valid snapshot 1`] = `
 <div>
   <styled.button
-    className=""
+    className="
+          
+          undefined
+        "
   />
 </div>
 `;

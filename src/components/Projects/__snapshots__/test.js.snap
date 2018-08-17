@@ -31,7 +31,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             C
@@ -41,7 +44,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             +/-
@@ -51,7 +57,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             %
@@ -61,7 +70,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             /
@@ -75,7 +87,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             7
@@ -85,7 +100,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             8
@@ -95,7 +113,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             9
@@ -105,7 +126,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             *
@@ -119,7 +143,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             4
@@ -129,7 +156,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             5
@@ -139,7 +169,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             6
@@ -149,7 +182,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             -
@@ -163,7 +199,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             1
@@ -173,7 +212,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             2
@@ -183,7 +225,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             3
@@ -193,7 +238,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             +
@@ -207,7 +255,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  undefined
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             0
@@ -217,7 +268,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             .
@@ -227,7 +281,10 @@ exports[`Projects has a valid snapshot 1`] = `
           className={undefined}
         >
           <button
-            className="sc-bdVaJa dyCkzW"
+            className="
+                  
+                  
+                 sc-bdVaJa bdFGKo"
             onClick={[Function]}
           >
             =

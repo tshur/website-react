@@ -12,7 +12,7 @@ const OPERATOR_FN = {
 
 describe('Calculator', () => {
 
-  it('renders without crashing', () => {
+  test('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Calculator />, div);
     ReactDOM.unmountComponentAtNode(div);
