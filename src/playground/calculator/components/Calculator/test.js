@@ -115,6 +115,9 @@ describe('Calculator logic', () => {
 
     clicks(['AC', 1, '.', 0, '%']);
     expect(wrapper.state('current')).toEqual('0.01');
+
+    clicks(['AC', 5, '=', '%', '%']);
+    expect(wrapper.state('current')).toEqual('0.0005');
   });
 
   test('+/- works correctly', () => {

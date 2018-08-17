@@ -51,7 +51,7 @@ class Calculator extends Component {
 
     } else if (symbol === '%') {
       if (!current)
-        current = '0';
+        current = operator ? '0' : total;
       current = String(parseFloat(current) / 100.0)
 
     } else if (symbol === '.') {
