@@ -95,15 +95,50 @@ describe('Calculator', () => {
   });
 
   test('equals works correctly', () => {
+    const wrapper = shallow(
+      <Calculator />
+    );
+    const keypad = wrapper.find('KeyPad');
+    const click = symbol => keypad.simulate('click', String(symbol));
 
+    click(1), click('=');
+    expect(wrapper.state('total')).toEqual(1);
+
+    click(5), click('+'), click('=');
+    expect(wrapper.state('total')).toEqual(5);
+    expect(wrapper.state('operator')).toEqual(null);
   });
 
   test('decimal point works correctly', () => {
+    const wrapper = shallow(
+      <Calculator />
+    );
+    const keypad = wrapper.find('KeyPad');
+    const click = symbol => keypad.simulate('click', String(symbol));
 
+    click(1), click('.'), click(0), click(1);
+    expect(wrapper.state('current')).toEqual('1.01');
+
+    click('+'), click('.'), click(1), click(2);
+    expect(wrapper.state('current')).toEqual('0.12');
+
+    click('+'); click('.');
+    expect(wrapper.state('total')).toEqual(1.13);
+    expect(wrapper.state('current')).toEqual('0.');
   });
 
   test('percent (%) works correctly', () => {
+    const wrapper = shallow(
+      <Calculator />
+    );
+    const keypad = wrapper.find('KeyPad');
+    const click = symbol => keypad.simulate('click', String(symbol));
 
+    click(5), click('%'), click('%');
+    expect(wrapper.state('current')).toEqual('0.0005');
+
+    click('AC'), click(1), click('.'), click(0), click('%');
+    expect(wrapper.state('current')).toEqual('0.01');
   });
 
   test('+/- works correctly', () => {
