@@ -4,14 +4,8 @@ import styles from './index.css';
 import Display from '../Display';
 import KeyPad from '../KeyPad';
 
+import { calculate } from '../../logic/calculate';
 
-const OPERATOR_FN = {
-  null: (total, current) => parseFloat(current),
-  '+': (total, current) => total + parseFloat(current),
-  '-': (total, current) => total - parseFloat(current),
-  '*': (total, current) => total * parseFloat(current),
-  '/': (total, current) => total / parseFloat(current),
-}
 
 class Calculator extends Component {
   constructor(props) {
@@ -27,62 +21,12 @@ class Calculator extends Component {
   }
 
   handleClick(symbol) {
-    let { total, current, operator } = this.state;
-
-    if (symbol === 'AC') {
-      total = null;
-      current = null;
-      operator = null;
-
-    } else if (symbol === 'C') {
-      current = '0';
-
-    } else if (symbol === '+/-') {
-      if (current) {
-        if (current[0] === '-')
-          current = current.slice(1);
-        else
-          current = '-' + current;
-      } else if (total && !operator) {
-        current = '-' + total;
-      } else {
-        current = '-0';
-      }
-
-    } else if (symbol === '%') {
-      if (!current)
-        current = operator ? '0' : total;
-      current = String(parseFloat(current) / 100.0)
-
-    } else if (symbol === '.') {
-      if (!current) {
-        current = '0.';
-      } else if (!current.includes('.')) {
-        current += '.';
-      }
-
-    } else if (symbol in OPERATOR_FN || symbol === '=') {
-      if (current) {
-        total = OPERATOR_FN[operator](total, current);
-        current = null;
-      }
-      operator = symbol === '=' ? null : symbol;
-
-    } else {
-      if (!current || current === '0')
-        current = ''
-      else if (current === '-0')
-        current = '-';
-
-        if (current.length < 9)
-          current += symbol;
-    }
-
-    this.setState({
-      total,
-      current,
-      operator
-    });
+    this.setState(
+      calculate({
+        ...this.state,
+        symbol
+      })
+    );
   }
 
   render() {
@@ -90,7 +34,6 @@ class Calculator extends Component {
 
     return (
       <div className={styles.calculator}>
-        <h1>Simple Calculator</h1>
         <Display value={current || total || '0'} />
         <KeyPad
           onClick={symbol => this.handleClick(symbol)}

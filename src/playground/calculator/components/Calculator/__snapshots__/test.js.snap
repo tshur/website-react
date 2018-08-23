@@ -2,9 +2,6 @@
 
 exports[`Calculator has a valid snapshot 1`] = `
 <div>
-  <h1>
-    Simple Calculator
-  </h1>
   <Display
     value="0"
   />

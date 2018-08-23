@@ -40,9 +40,9 @@ describe('Display', () => {
 
     // Mixed precision
     wrapper.setProps({ value: 12345.6789 });
-    expect(displayText()).toEqual('12345.679');
+    expect(displayText()).toEqual('12345.6789');
     wrapper.setProps({ value: 12.3456789 });
-    expect(displayText()).toEqual('12.345679');
+    expect(displayText()).toEqual('12.3456789');
 
     // Negative numbers
     wrapper.setProps({ value: -123456789 });

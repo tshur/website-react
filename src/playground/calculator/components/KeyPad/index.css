@@ -4,3 +4,7 @@
   grid-gap: 15px;
   margin-bottom: 15px;
 }
+
+:local .row:last-child {
+  margin-bottom: 0;
+}

@@ -1,25 +1,10 @@
 import React from 'react';
 import styles from './index.css';
 
-const Display = ({ value }) => {
-  if (!isFinite(value))
-    value = 'Error';
+import { format_value } from '../../logic/format.js';
 
-  value = String(value);
-  if (
-    value.length > 9 ||
-    (value.startsWith('-') && value.length === 9))
-  {
-    let guess = parseFloat(value).toPrecision(5);
-    if (String(guess).length < 9) {
-      if (parseFloat(value) < 1)
-        value = parseFloat(value).toFixed(8);
-      else
-        value = parseFloat(value).toPrecision(8);
-    } else {
-      value = guess;
-    }
-  }
+const Display = ({ value }) => {
+  value = format_value(value, 9);
 
   return (
     <div className={styles.display}>

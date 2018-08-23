@@ -11,9 +11,6 @@ exports[`Projects has a valid snapshot 1`] = `
   <div
     className={undefined}
   >
-    <h1>
-      Simple Calculator
-    </h1>
     <div
       className={undefined}
     >
