@@ -10,6 +10,12 @@ const OPERATOR_FN = {
   '/': (a, b) => a / b,
 }
 
+const value_to_clicks = value => {
+  return String(value)
+    .split('')
+    .map(s => s === '-' ? '+/-' : s);
+}
+
 describe('Calculator', () => {
 
   test('renders without crashing', () => {
@@ -51,13 +57,15 @@ describe('Calculator logic', () => {
   });
 
   // Test different operator combinations
-  for (let op of ['+', '-', '*', '/']) {
-    for (let a of [2]) {
-      for (let b of [-3, 0, 1]) {
-        let c = OPERATOR_FN[op](a, b);
+  for (const op of ['+', '-', '*', '/']) {
+    for (const a of [2]) {
+      for (const b of [-3.2, 0, 0.01, 1]) {
+        const c = OPERATOR_FN[op](a, b);
+        const a_clicks = value_to_clicks(a);
+        const b_clicks = value_to_clicks(b);
 
         test(`correct result for ${a} ${op} ${b} = ${c}`, () => {
-          clicks([a, op, b, '=']);
+          clicks([...a_clicks, op, ...b_clicks, '=']);
           expect(wrapper.state('total')).toEqual(c);
         });
       }

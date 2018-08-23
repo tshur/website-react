@@ -6,7 +6,7 @@ const OPERATOR_FN = {
   '/': (total, current) => total / parseFloat(current),
 };
 
-const clear_all = () => {
+const handle_clear_all = () => {
   return {
     total: null,
     current: null,
@@ -14,13 +14,12 @@ const clear_all = () => {
   };
 };
 
-const clear = ({ current, ...rest }) => {
+const handle_clear = ({ total, current, operator }) => {
   current = '0';
-
-  return { current, ...rest };
+  return { total, current, operator };
 };
 
-const negate = ({ total, current, operator }) => {
+const handle_negate = ({ total, current, operator }) => {
   if (current) {
     if (current[0] === '-')
       current = current.slice(1);
@@ -35,7 +34,7 @@ const negate = ({ total, current, operator }) => {
   return { total, current, operator };
 };
 
-const percent = ({ total, current, operator }) => {
+const handle_percent = ({ total, current, operator }) => {
   if (!current)
     current = operator ? '0' : total;
   current = String(parseFloat(current) / 100.0)
@@ -43,17 +42,17 @@ const percent = ({ total, current, operator }) => {
   return { total, current, operator };
 };
 
-const decimal = ({ current, ...rest }) => {
+const handle_decimal = ({ total, current, operator }) => {
   if (!current) {
     current = '0.';
   } else if (!current.includes('.')) {
     current += '.';
   }
 
-  return { current, ...rest };
+  return { total, current, operator };
 };
 
-const operation = ({ total, current, operator, symbol }) => {
+const handle_operation = ({ total, current, operator, symbol }) => {
   if (current) {
     total = OPERATOR_FN[operator](total, current);
     current = null;
@@ -63,7 +62,7 @@ const operation = ({ total, current, operator, symbol }) => {
   return { total, current, operator };
 };
 
-const equals = ({ total, current, operator }) => {
+const handle_equals = ({ total, current, operator }) => {
   if (current) {
     total = OPERATOR_FN[operator](total, current);
     current = null;
@@ -73,7 +72,7 @@ const equals = ({ total, current, operator }) => {
   return { total, current, operator };
 };
 
-const digit = ({ total, current, operator, symbol }) => {
+const handle_digit = ({ total, current, operator, symbol }) => {
   if (!current || current === '0')
     current = ''
   else if (current === '-0')
@@ -85,31 +84,30 @@ const digit = ({ total, current, operator, symbol }) => {
   return { total, current, operator };
 };
 
-const calculate = ({ ...state, symbol }) => {
-  if (symbol === 'AC') {
-    return clear_all();
+const HANDLE_SYMBOL = {
+  'AC':  handle_clear_all,
+  'C':   handle_clear,
+  '+/-': handle_negate,
+  '%':   handle_percent,
+  '/':   handle_operation,
+  '*':   handle_operation,
+  '-':   handle_operation,
+  '+':   handle_operation,
+  '=':   handle_equals,
+  '.':   handle_decimal,
+  '0':   handle_digit,
+  '1':   handle_digit,
+  '2':   handle_digit,
+  '3':   handle_digit,
+  '4':   handle_digit,
+  '5':   handle_digit,
+  '6':   handle_digit,
+  '7':   handle_digit,
+  '8':   handle_digit,
+  '9':   handle_digit,
+}
 
-  } else if (symbol === 'C') {
-    return clear(state);
-
-  } else if (symbol === '+/-') {
-    return negate(state);
-
-  } else if (symbol === '%') {
-    return percent(state);
-
-  } else if (symbol === '.') {
-    return decimal(state);
-
-  } else if (symbol in OPERATOR_FN) {
-    return operation({ ...state, symbol });
-
-  } else if (symbol === '=') {
-    return equals(state);
-
-  } else {
-    return digit({ ...state, symbol });
-  }
-};
+// state: { total, current, operator, symbol }
+const calculate = state => HANDLE_SYMBOL[state.symbol](state);
 
 export { calculate };
