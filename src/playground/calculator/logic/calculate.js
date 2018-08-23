@@ -26,7 +26,7 @@ const handle_negate = ({ total, current, operator }) => {
     else
       current = '-' + current;
   } else if (total && !operator) {
-    current = '-' + total;
+    current = String(-1 * total);
   } else {
     current = '-0';
   }
@@ -52,7 +52,7 @@ const handle_decimal = ({ total, current, operator }) => {
   return { total, current, operator };
 };
 
-const handle_operation = ({ total, current, operator, symbol }) => {
+const handle_operator = ({ total, current, operator, symbol }) => {
   if (current) {
     total = OPERATOR_FN[operator](total, current);
     current = null;
@@ -89,10 +89,10 @@ const HANDLE_SYMBOL = {
   'C':   handle_clear,
   '+/-': handle_negate,
   '%':   handle_percent,
-  '/':   handle_operation,
-  '*':   handle_operation,
-  '-':   handle_operation,
-  '+':   handle_operation,
+  '/':   handle_operator,
+  '*':   handle_operator,
+  '-':   handle_operator,
+  '+':   handle_operator,
   '=':   handle_equals,
   '.':   handle_decimal,
   '0':   handle_digit,
