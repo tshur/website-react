@@ -4,7 +4,7 @@ import styles from './index.css';
 import Display from '../Display';
 import KeyPad from '../KeyPad';
 
-import { calculate } from '../../logic/calculate';
+import { calculate, valid_symbol } from '../../logic/calculate';
 
 
 class Calculator extends Component {
@@ -18,6 +18,7 @@ class Calculator extends Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
   handleClick(symbol) {
@@ -27,6 +28,31 @@ class Calculator extends Component {
         symbol
       })
     );
+  }
+
+  handleKeyDown(event) {
+    let { key } = event;
+
+    if (key === 'Enter')
+      key = '=';
+    else if (key === 'Backspace' ||
+             key === 'Delete')
+      key = 'C';
+    else if (key === 'Escape')
+      key = 'AC';
+
+    if (valid_symbol(key)) {
+      event.preventDefault();
+      this.handleClick(key);
+    }
+  }
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyDown);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyDown);
   }
 
   render() {

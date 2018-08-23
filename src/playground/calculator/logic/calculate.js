@@ -110,4 +110,6 @@ const HANDLE_SYMBOL = {
 // state: { total, current, operator, symbol }
 const calculate = state => HANDLE_SYMBOL[state.symbol](state);
 
-export { calculate };
+const valid_symbol = symbol => symbol in HANDLE_SYMBOL;
+
+export { calculate, valid_symbol };
