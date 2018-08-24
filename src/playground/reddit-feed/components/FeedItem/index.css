@@ -1,0 +1,55 @@
+:local .item {
+  background: #fff;
+  display: flex;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+:local .card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+              0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+:local .card:hover {
+  margin-top: -5px;
+  margin-bottom: 15px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+              0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+:local .votes {
+  background: rgba(255, 95, 0, 0.85);
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+:local .post {
+  float: right;
+  padding: 10px;
+}
+
+:local .postInfo {
+  color: #444;
+  font-size: 12px;
+}
+
+:local .title {
+  color: #222;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+:local .engagement {
+  color: #444;
+  font-size: 12px;
+  font-weight: 700;
+}

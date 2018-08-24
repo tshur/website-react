@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './index.css';
 
-import Game from '../../playground/tic-tac-toe/components/Game';
+import Feed from '../../playground/reddit-feed/components/Feed';
 
 const Projects = () =>
   <div className={`container ${styles.projects}`}>
     <h1> Projects </h1>
     <br />
-    <Game />
+    <Feed />
   </div>
 
 export default Projects;

@@ -11,86 +11,209 @@ exports[`Projects has a valid snapshot 1`] = `
   <div
     className={undefined}
   >
-    <div>
-      <h1>
-        Tic Tac Toe!
-      </h1>
+    <div
+      className="undefined undefined"
+    >
+      <div
+        className={undefined}
+      >
+        <div>
+          ^
+        </div>
+        <div>
+          12000
+        </div>
+        <div>
+          v
+        </div>
+      </div>
       <div
         className={undefined}
       >
         <div
           className={undefined}
         >
-          <button
-            className="undefined "
-            onClick={[Function]}
-          />
-          <button
-            className="undefined "
-            onClick={[Function]}
-          />
-          <button
-            className="undefined "
-            onClick={[Function]}
-          />
+          r/aww
+           | Posted by 
+          u/timshur
+           at 
+          4:00pm
         </div>
         <div
           className={undefined}
         >
-          <button
-            className="undefined "
-            onClick={[Function]}
-          />
-          <button
-            className="undefined "
-            onClick={[Function]}
-          />
-          <button
-            className="undefined "
-            onClick={[Function]}
-          />
+          I love my little pupper!
         </div>
         <div
           className={undefined}
         >
-          <button
-            className="undefined "
-            onClick={[Function]}
-          />
-          <button
-            className="undefined "
-            onClick={[Function]}
-          />
-          <button
-            className="undefined "
-            onClick={[Function]}
-          />
+          Comments: 
+          440
         </div>
       </div>
     </div>
     <div
-      className={undefined}
+      className="undefined undefined"
     >
-      <div
-        className="status"
-      >
-        Next player: X
-      </div>
-      <button
-        className="sc-bdVaJa dsPgtj"
-        onClick={[Function]}
-      >
-         Reverse 
-      </button>
       <div
         className={undefined}
       >
-        <button
-          className="undefined  undefined sc-bdVaJa dsPgtj"
-          onClick={[Function]}
+        <div>
+          ^
+        </div>
+        <div>
+          -300
+        </div>
+        <div>
+          v
+        </div>
+      </div>
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
         >
-          Go to game start
-        </button>
+          r/terriblepuns
+           | Posted by 
+          u/itstimshore
+           at 
+          12:00pm
+        </div>
+        <div
+          className={undefined}
+        >
+          A pun so terrible
+        </div>
+        <div
+          className={undefined}
+        >
+          Comments: 
+          345
+        </div>
+      </div>
+    </div>
+    <div
+      className="undefined undefined"
+    >
+      <div
+        className={undefined}
+      >
+        <div>
+          ^
+        </div>
+        <div>
+          25306
+        </div>
+        <div>
+          v
+        </div>
+      </div>
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+        >
+          r/javascript
+           | Posted by 
+          u/nottim
+           at 
+          1:00am
+        </div>
+        <div
+          className={undefined}
+        >
+          Making a Reddit feed with React
+        </div>
+        <div
+          className={undefined}
+        >
+          Comments: 
+          855
+        </div>
+      </div>
+    </div>
+    <div
+      className="undefined undefined"
+    >
+      <div
+        className={undefined}
+      >
+        <div>
+          ^
+        </div>
+        <div>
+          1400
+        </div>
+        <div>
+          v
+        </div>
+      </div>
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+        >
+          r/science
+           | Posted by 
+          u/surething
+           at 
+          3:35pm
+        </div>
+        <div
+          className={undefined}
+        >
+          What a time to be alive ~
+        </div>
+        <div
+          className={undefined}
+        >
+          Comments: 
+          30
+        </div>
+      </div>
+    </div>
+    <div
+      className="undefined undefined"
+    >
+      <div
+        className={undefined}
+      >
+        <div>
+          ^
+        </div>
+        <div>
+          6000
+        </div>
+        <div>
+          v
+        </div>
+      </div>
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+        >
+          r/travel
+           | Posted by 
+          u/forshur
+           at 
+          6:50pm
+        </div>
+        <div
+          className={undefined}
+        >
+          Beautiful trip to Machu Picchu
+        </div>
+        <div
+          className={undefined}
+        >
+          Comments: 
+          3000
+        </div>
       </div>
     </div>
   </div>
