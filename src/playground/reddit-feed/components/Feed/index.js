@@ -22,6 +22,7 @@ class Feed extends Component {
   }
 
   componentDidMount() {
+    this._isMounted = true;
     axios.get(API + SUBREDDIT + QUERY, { cancelToken: this._source.token })
       .then(result => {
         if (!this._isMounted) return;
