@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import Projects from '.';
 
 describe('Projects', () => {
@@ -12,10 +12,9 @@ describe('Projects', () => {
   });
 
   test('has a valid snapshot', () => {
-    const component = renderer.create(
+    const wrapper = shallow(
       <Projects />
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });

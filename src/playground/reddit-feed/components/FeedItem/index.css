@@ -3,6 +3,7 @@
   display: flex;
   margin-bottom: 10px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 :local .card {
@@ -22,13 +23,17 @@
   background: rgba(255, 95, 0, 0.85);
   border-radius: 4px 0 0 4px;
   display: flex;
+  flex: 0 0 50px;
   flex-direction: column;
   float: left;
-  width: 50px;
   justify-content: center;
   align-items: center;
   font-weight: 700;
   font-size: 14px;
+}
+
+:local .vote {
+  user-select: none;
 }
 
 :local .post {
@@ -43,7 +48,7 @@
 
 :local .title {
   color: #222;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   margin: 10px 0;
 }
