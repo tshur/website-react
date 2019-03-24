@@ -1,0 +1,26 @@
+.not_found {
+  background: red;
+  height: calc(100% - 100px);
+  width: calc(100% - 70px);
+  float: right;
+  overflow: auto;
+
+  .center {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    .big {
+      margin-top: 48px;
+      font-size: 64px;
+    }
+
+    .text {
+      margin-top: 10px;
+      font-size: 32px;
+    }
+  }
+}
+

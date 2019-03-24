@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './index.css';
+import './index.scss';
 
 import Game from '../../playground/tic-tac-toe/components/Game';
 
 const Projects = () =>
-  <div className={`container ${styles.projects}`}>
+  <div className='container projects'>
     <h1> Projects </h1>
     <br />
     <Game />

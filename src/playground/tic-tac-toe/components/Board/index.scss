@@ -1,0 +1,15 @@
+.board {
+  display: table;
+  border-collapse: collapse;
+
+  .row {
+    display: table-row;
+    border-bottom: 3px solid #444;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+

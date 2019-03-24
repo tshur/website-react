@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './index.css';
+import './index.scss';
 
 import Home from '../Home';
 import About from '../About';
@@ -25,7 +25,7 @@ const Body = props => {
   }
 
   return (
-    <div className={`container ${styles.body}`}>
+    <div className='container body'>
       {content}
     </div>
   );

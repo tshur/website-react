@@ -1,4 +1,4 @@
-:local .square {
+.square {
   background: #eee;
   border: 0;
   border-right: 3px solid #444;
@@ -12,16 +12,16 @@
   font-size: 48px;
   overflow: hidden;
   word-wrap: none;
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  &:focus {
+    outline: 0;
+  }
 }
 
-:local .square:last-child {
-  border-right: 0;
-}
-
-:local .square:focus {
-  outline: 0;
-}
-
-:local .highlight {
+.highlight {
   background: #dd2222;
 }

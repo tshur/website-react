@@ -1,0 +1,37 @@
+.tic-tac-toe {
+  display: flex;
+  flex-direction: row;
+
+  .info {
+    padding-left: 30px;
+    padding-top: 43px;
+    font-size: 24px;
+
+    .button {
+      background: #eee;
+      border: 1px solid #aaa;
+      height: 20px;
+      font-size: 14px;
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    .moveList {
+      margin-top: 9px;
+
+      .move {
+        display: block;
+        margin-top: 2px;
+        min-width: 170px;
+      }
+
+      .selected {
+        font-weight: bold;
+        background: #fff;
+      }
+    }
+  }
+}
+
+

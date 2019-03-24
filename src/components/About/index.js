@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './index.css';
+import './index.scss';
 
 const About = () =>
-  <div className={`container ${styles.about}`}>
+  <div className='container about'>
     <h1> About </h1>
   </div>
 

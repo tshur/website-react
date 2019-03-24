@@ -1,0 +1,36 @@
+.footer {
+  background: blue;
+  height: 100px;
+  width: calc(100% - 70px);
+  float: right;
+  overflow: auto;
+
+  .contact {
+    height: 70px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .linkedin {
+      padding-left: 3px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      width: 250px;
+      margin-left: 15%;
+      margin-top: 5px;
+
+      .icon {
+        float: left;
+      }
+
+      .text {
+        float: left;
+        margin-left: 15px;
+        font-size: 20px;
+      }
+    }
+  }
+}

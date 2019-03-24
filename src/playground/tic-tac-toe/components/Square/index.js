@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './index.css';
+import './index.scss';
 
 const Square = ({ value, onClick, winningSquare }) =>
   <button
-    className={`${styles.square} ${winningSquare ? styles.highlight : ''}`}
+    className={`square ${winningSquare ? 'highlight' : ''}`}
     onClick={onClick}
   >
     {value}

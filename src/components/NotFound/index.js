@@ -1,17 +1,17 @@
 import React from 'react';
-import styles from './index.css';
+import './index.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFrown } from '@fortawesome/free-solid-svg-icons';
 
 const NotFound = () =>
-  <div className={`container ${styles.not_found}`}>
-    <div className={styles.center}>
+  <div className='container not_found'>
+    <div className='center'>
       <FontAwesomeIcon icon={faFrown} size='8x' />
-      <div className={styles.big}>
+      <div className='big'>
         404
       </div>
-      <div className={styles.text}>
+      <div className='text'>
         Oops! This page does not exist!
       </div>
     </div>

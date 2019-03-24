@@ -1,18 +1,7 @@
 import React, { Component } from 'react';
-import styles from './index.css';
+import './index.scss';
 
 import Board from '../Board';
-import styled from 'styled-components';
-
-const Button = styled.button`
-  background: #eee;
-  border: 1px solid #aaa;
-  height: 20px;
-  font-size: 14px;
-  &:focus {
-    outline: 0;
-  }
-`;
 
 class Game extends Component {
   constructor(props) {
@@ -85,13 +74,13 @@ class Game extends Component {
         : `Go to game start`;
 
       return (
-        <Button
+        <button
           key={move}
-          className={`${styles.move}  ${move === moveNumber ? styles.selected : ''}`}
+          className={`move button ${move === moveNumber ? 'selected' : ''}`}
           onClick={() => this.jumpTo(move)}
         >
           {desc}
-        </Button>
+        </button>
       );
     });
 
@@ -107,7 +96,7 @@ class Game extends Component {
       status = `Winner: ${winner}`;
 
     return (
-      <div className={styles.container}>
+      <div className='tic-tac-toe'>
         <div>
           <h1>Tic Tac Toe!</h1>
           <Board
@@ -116,10 +105,10 @@ class Game extends Component {
             onClick={i => this.handleClick(i)}
           />
         </div>
-        <div className={styles.info}>
+        <div className='info'>
           <div className='status'>{status}</div>
-          <Button onClick={this.handleReverse}> Reverse </Button>
-          <div className={styles.moveList}>{moves}</div>
+          <button className='button' onClick={this.handleReverse}> Reverse </button>
+          <div className='moveList'>{moves}</div>
         </div>
       </div>
     );

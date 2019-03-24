@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import styles from './index.css';
+import './index.scss';
 
 import Navbar from '../Navbar';
 import Body from '../Body';
@@ -9,7 +9,7 @@ import NotFound from '../NotFound';
 import Footer from '../Footer';
 
 const App = () =>
-  <div className={styles.app}>
+  <div className='app'>
     <Navbar />
     <Switch>
       <Route exact path='/' component={Body} />

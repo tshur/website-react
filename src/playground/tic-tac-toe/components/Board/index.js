@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './index.css';
+import './index.scss';
 
 import Square from '../Square';
 
@@ -20,13 +20,13 @@ const Board = ({ winningLine, squares, onClick }) => {
       for (let j = 0; j < 3; j++) {
         row.push(renderSquare(3 * i + j));
       }
-      board.push(<div key={i} className={styles.row}>{row}</div>);
+      board.push(<div key={i} className='row'>{row}</div>);
     }
     return board;
   };
 
   return (
-    <div className={styles.board}>
+    <div className='board'>
       {renderBoard(3)}
     </div>
   );
