@@ -1,23 +1,36 @@
 .nav {
-  background: green;
-  height: 70px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  height: 56px;
   width: 100%;
   overflow: hidden;
 
-  .button {
-    background: yellow;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    float: left;
-    margin-left: 70px;
-    height: 70px;
-    width: 120px;
+  .nav-item {
+    margin-right: 20px;
 
-    .text {
-      font-size: 24px;
+    &:last-child {
+      margin-right: 112px;
+    }
+
+    .button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      height: 56px;
+      padding: 0 20px;
       color: black;
+
+      &:hover {
+        color: #555555;
+      }
+      .text {
+        font-size: 18px;
+        text-transform: uppercase;
+      }
     }
   }
 }

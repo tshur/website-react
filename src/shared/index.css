@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: #eee;
+  background: #fff;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -14,6 +14,19 @@ body {
   height: 100%;
   width: 100%;
   overflow: auto;
+}
+
+.page-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.page-container > .container {
+  height: 100%;
+  width: 50%;
 }
 
 .link {
