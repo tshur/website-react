@@ -6,7 +6,6 @@ import './index.scss';
 import Navbar from '../Navbar';
 import Body from '../Body';
 import NotFound from '../NotFound';
-import Footer from '../Footer';
 
 const App = () =>
   <div className='app'>
@@ -17,7 +16,6 @@ const App = () =>
       <Route path='/projects' component={Body} />
       <Route component={NotFound} />
     </Switch>
-    <Footer />
   </div>
 
 export default App;
