@@ -4,18 +4,22 @@ import { Switch, Route } from 'react-router-dom';
 import './index.scss';
 
 import Navbar from '../Navbar';
-import Body from '../Body';
+import Home from '../Home';
+import About from '../About';
+import Projects from '../Projects';
 import NotFound from '../NotFound';
 
 const App = () =>
   <div className='app'>
     <Navbar />
-    <Switch>
-      <Route exact path='/' component={Body} />
-      <Route path='/about' component={Body} />
-      <Route path='/projects' component={Body} />
-      <Route component={NotFound} />
-    </Switch>
+    <div className='body-container'>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/projects' component={Projects} />
+        <Route component={NotFound} />
+      </Switch>
+    </div>
   </div>
 
 export default App;

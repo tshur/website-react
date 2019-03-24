@@ -1,3 +1,9 @@
 .app {
   height: 100vh;
+
+  .body-container {
+    background: red;
+    height: calc(100% - 70px);
+    width: 100%;
+  }
 }
