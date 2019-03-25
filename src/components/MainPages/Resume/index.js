@@ -9,7 +9,10 @@ const Resume = () =>
     <div className='nav-background'></div>
     <div className='resume-paper'></div>
     <a href='timothy_shur_resume.pdf' className='link' download>
-      <FontAwesomeIcon className='download' icon={faDownload}></FontAwesomeIcon>
+      <div className='download'>
+        <p className='download-text'>Download</p>
+        <FontAwesomeIcon className='download-icon' icon={faDownload}></FontAwesomeIcon>
+      </div>
     </a>
   </div>
 
