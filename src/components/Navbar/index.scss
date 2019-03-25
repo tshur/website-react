@@ -1,5 +1,5 @@
 .nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   height: 56px;
   width: 100%;
@@ -7,6 +7,7 @@
   display: flex;
   justify-content: flex-end;
   box-shadow: -5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  z-index: 5;
 
   .nav-item {
     margin-right: 20px;
