@@ -1,7 +1,37 @@
 .home {
     background-image: url('../../../assets/shur_portrait_large.jpg');
     background-position-x: center;
-    background-position-y: 30%;
+    background-position-y: 15%;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+
+    .darken {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .container {
+        width: 70%;
+        overflow: hidden;
+
+        .splash-card {
+            color: #fff;
+            // color: rgb(15, 16, 27);
+            height: 70%;
+            margin-right: 35%;
+            padding: 15% 5%;
+
+            .headline {
+                margin-top: 5px;
+                margin-bottom: 0;
+                font-family: 'Roboto', sans-serif;
+                font-size: 96px;
+                text-transform: uppercase;
+            }
+            .subtitle {
+                font-size: 36px;
+            }
+        }
+    }
 }
